@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/reset.css" />
+        <link rel="stylesheet" href="/src/styles.css" />
+        <title>Sign In</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="form-container">
+                <form action="" method="POST" class="form" id="form-2">
+                    <h3 class="form-heading form-heading__login">LOG IN</h3>  
+                    <div class="form-group"> 
+                        <div class="form-wrap">
+                            <img src="/icon/user.svg" class="form-icon" alt="">
+                            <input
+                                id="email"
+                                name="email"
+                                type="text"
+                                placeholder="Username"
+                                class="form-control"
+                            /> 
+                        </div> 
+                    </div>
+    
+                    <div class="form-group"> 
+                        <div class="form-wrap">
+                            <img src="/icon/password.svg" class="form-icon" alt="">
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                placeholder="Password"
+                                class="form-control"
+                            /> 
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group form-group__remember">  
+                        <label class="radio" for="remember">
+                            <input type="radio" name="remember" id="remember" value="remember" />
+                            Remember me
+                          </label>
+                          <a href="#!">Forgot password?</a>
+                    </div>
+    
+                    <button class="form-submit">Log In</button>
+                    <p class="form-desc" >or sign in with</p>
+                    <div class="form-social">
+                        <img class="form-icon" src="/icon/facebook.png" alt="">
+                        <img class="form-icon" src="/icon/gg.png" alt="">
+                        <img class="form-icon" src="/icon/linkendin.png" alt="">
+                    </div>
+                </form>
+    
+                <section class="form-content form">
+                    <h2 class="form-heading form-heading__content">WELCOME</h2>
+                    <p class="form-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo cons aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo cons
+                    </p>
+                    <div class="form-desc form-desc__register">Don't have account? <a href="sign-up.html">Register here</a></div>
+                    
+                </section>
+            </div>
+        </div>
+        <script src="/js/form.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                Validator({
+                    form: "#form-2",
+                    formGroupSelector: ".form-group",
+                    errorSelector: ".form-message",
+                    rules: [
+                        Validator.isEmail("#email"),
+                        Validator.minLength("#password", 6),
+                    ],
+                    onSubmit: function (data) {
+                        // Call API
+                        console.log(data);
+                    },
+                });
+            });
+        </script>
+    </body>
+</html>

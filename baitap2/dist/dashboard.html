@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/dashboard.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu">
+            <div class="logo">
+                <img src="/icon/logo.jpg" alt="">
+            </div>
+            <h1>SGOD</h1>
+        </div>
+        <a href="dashboard.html" class="active">
+            <li><i class="ri-bar-chart-box-line"></i> Dashboard</li>
+        </a>
+        <a href="user.html">
+            <li><i class="ri-account-circle-line"></i> User</li>
+        </a>
+        <a href="post.html">
+            <li class="active"><i class="ri-article-line"></i> Posts</li>
+        </a>
+        <a href="#">
+            <li><i class="ri-folder-2-line"></i> Post List</li>
+        </a>
+    </div>
+    <div class="content">
+        <header>
+            <div class="avt">
+                <img src="" alt="">
+            </div>
+            <div class="logout">Log out
+            </div>
+        </header>
+        <div class="right-content">
+            <div class="dashboard">
+                <div class="chart" id="users">
+                    <div class="title">
+                        <h3>Total Users</h3>
+                        <div class="select">
+                            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                            <div class="dropdown" style="float: right;">
+                                <div class="btn">
+                                    <button class="dropbtn">Items</button>
+                                    <i class="ri-arrow-down-s-fill"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">10</a>
+                                    <a href="#">15</a>
+                                    <a href="#">20</a>
+                                </div>
+                            </div>
+                            <div class="dropdown" style="float: right;">
+                                <div class="btn">
+                                    <button class="dropbtn">Time</button>
+                                    <i class="ri-arrow-down-s-fill"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">Day</a>
+                                    <a href="#">Month</a>
+                                    <a href="#">Year</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="User_Chart"></canvas>
+                </div>
+                <div class="chart" id="posts">
+                    <div class="title">
+                        <h3>Total Posts</h3>
+                        <div class="select">
+                            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                            <div class="dropdown" style="float: right;">
+                                <div class="btn">
+                                    <button class="dropbtn">Items</button>
+                                    <i class="ri-arrow-down-s-fill"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">10</a>
+                                    <a href="#">15</a>
+                                    <a href="#">20</a>
+                                </div>
+                            </div>
+                            <div class="dropdown" style="float: right;">
+                                <div class="btn">
+                                    <button class="dropbtn">Time</button>
+                                    <i class="ri-arrow-down-s-fill"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">Day</a>
+                                    <a href="#">Month</a>
+                                    <a href="#">Year</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="Post_Chart"></canvas>
+                </div>
+                <div class="chart" id="u_post">
+                    <div class="title">
+                        <h3>User's Post</h3>
+                        <div class="select">
+                            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                            <div class="dropdown" style="float: right;">
+                                <div class="btn">
+                                    <button class="dropbtn">Items</button>
+                                    <i class="ri-arrow-down-s-fill"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">10</a>
+                                    <a href="#">15</a>
+                                    <a href="#">20</a>
+                                </div>
+                            </div>
+                            <div class="dropdown" style="float: right;">
+                                <div class="btn">
+                                    <button class="dropbtn">Time</button>
+                                    <i class="ri-arrow-down-s-fill"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">Day</a>
+                                    <a href="#">Month</a>
+                                    <a href="#">Year</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="User's_Posts"></canvas>
+                </div>
+                <div class="trending" id="trending">
+                    <div class="title">
+                        <h3>Trending</h3>
+                        <div class="select">
+                            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                            <div class="dropdown" style="float: right;">
+                                <div class="btn">
+                                    <button class="dropbtn">Items</button>
+                                    <i class="ri-arrow-down-s-fill"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">10</a>
+                                    <a href="#">15</a>
+                                    <a href="#">20</a>
+                                </div>
+                            </div>
+                            <div class="dropdown" style="float: right;">
+                                <div class="btn">
+                                    <button class="dropbtn">Time</button>
+                                    <i class="ri-arrow-down-s-fill"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">Day</a>
+                                    <a href="#">Month</a>
+                                    <a href="#">Year</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="trending_chart"></canvas>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>@Copyright 2014 by PSD Booster. All Rights Reserved</span>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+header {
+    width: 100%;
+    height: 77px;
+    background: rgb(28,17,122);
+    background: linear-gradient(90deg, rgba(28,17,122,0.98) 22%, rgba(53,37,200,1) 92%);
+    text-align: left;
+    padding: 5px 100px;
+}
+
+.logo img {
+    width: 61px;
+    height: 61px;
+    border-radius: 50%;
+}
+
+.avt {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin-left: auto;
+}
+
+.logout {
+    font-size: 22px;
+    color: #ffffff;
+    background: rgba(3,150,255,0.93);    
+    padding: 10px 50px;
+    border-radius: 1px solid #fff;
+    border-radius: 2px;
+    position:absolute;
+    top: 77px;
+    right: 100px;
+    display: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;  
+    background-color: #E6EFFF;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: rgb(28,17,122);
+    background: linear-gradient(90deg, rgba(28,17,122,0.98) 22%, rgba(53,37,200,1) 92%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+footer span {
+    color: #ffffff;
+    font-weight: 200;
+    font-family: "Sarala", sans-serif;
+    font-size: 18px;
+}
+
+.sidebar{
+    max-height: 100%;
+    width: 230px;
+    background-color: #fff;
+    transition: 0.5s ease;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 46px;
+    margin-bottom: 50px;
+    margin-right: 15px;
+}
+
+.menu h1{
+    color: #000000;
+    font-size: 40px;
+    font-family: "Outfit", sans-serif;
+    font-weight: medium;
+    pointer-events: none;
+}
+
+.menu i {
+    font-size: 24px;
+    color: #000000;
+    padding-right: 15px;
+}
+
+.sidebar a {    
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    margin: 15px 0;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    padding: 5px 0;
+    background-color: #E6EFFF;
+    width: 100%;
+    transition: 0.2s ease-out;
+}
+
+.sidebar a.active {
+    padding: 5px 0;
+    background-color: #b1c9ef;
+    width: 100%;
+}
+
+.sidebar a li{
+    list-style: none;
+    font-family: "Outfit",sans-serif;
+    font-weight: medium;
+    font-size: 20px;
+    color: #000000;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+.sidebar a li i{
+    font-size: 25px;
+    color: #000000;
+    margin: 0 15px;
+}
+
+.right-content {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    padding: 20px;
+    margin: 55px 0;
+    padding-left: 50px;   
+    padding-right: 100px;
+}
+  
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Outfit", sans-serif;
+}
+  
+.chart {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+  
+.chart-container canvas {
+    width: 100% !important;
+    height: 250px !important;
+}
+  
+h3 {
+    text-align: center;
+}
+  
+.trending {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    height: 350px; 
+}
+  
+.trending canvas {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    width: 350px !important; 
+    height: 100% !important; 
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select {
+    display: flex;
+    gap: 5px;
+}
+
+.btn {
+    border: 1px solid #000000ac;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.dropbtn {
+    background-color: #ffffff;
+    color: black;
+    padding: 0 10px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 70px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 13px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .btn, .dropdown:hover .dropbtn {
+    background-color: #E6EFFF;
+}
